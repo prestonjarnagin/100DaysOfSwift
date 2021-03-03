@@ -28,6 +28,12 @@ struct ContentView: View {
             
             ForEach(selections, id: \.self) { selection in
                 Button(action: { processAnswer(selection) }) { Text(selection.capitalized) }
+                    .frame(minWidth: 120)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.purple)
+                    .cornerRadius(3.0)
+                    .padding([.top, .bottom], 10)
             }
             
             Spacer()
